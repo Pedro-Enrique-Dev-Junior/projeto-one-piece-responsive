@@ -10,7 +10,17 @@ botoes.forEach((botao, indice) => {
 
         personagens[indice].classList.add("selecionado");
 
+        // Adiciona a classe de rotação
+        botao.classList.add("rotate");
+
+        // Remove a classe de rotação após a animação terminar
+        botao.addEventListener('animationend', () => {
+            botao.classList.remove("rotate");
+        });
+
     });
+
+    
 });
 function desselecionarPersonagem() {
     const personagemSelecionado = document.querySelector(".personagem.selecionado");
@@ -21,4 +31,6 @@ function desselecionarBotao() {
     const botaoSelecionado = document.querySelector(".botao.selecionado");
     botaoSelecionado.classList.remove("selecionado");
 }
+
+
 

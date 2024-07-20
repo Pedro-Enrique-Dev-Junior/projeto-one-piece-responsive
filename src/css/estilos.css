@@ -91,3 +91,16 @@ main .personagem .imagem{
     transform: scale(1.2);
     box-shadow: 0 0 10px #D9D9D9;
 }
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate360 1s ease-in-out;
+}
